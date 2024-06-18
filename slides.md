@@ -1,17 +1,8 @@
 ---
-# try also 'default' to start simple - eloc
 theme: eloc
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides, markdown enabled
-title: Welcome to Slidev
+title: First Principles of Web Development
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply any unocss classes to the current slide
+  ## Exploring the First Principles of Web Development
 class: text-center
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
@@ -22,9 +13,6 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
-
-
-
 
 ---
 
@@ -42,7 +30,14 @@ mdc: true
 </div>
 
 <!--
-- Introduce Myself
+- Introduce Myself:
+  - Role 
+  - BU
+  - Project
+- Why:
+  - Black Box
+  - Helpful when starting 
+End: What is frist principles
 -->
 
 ---
@@ -50,23 +45,26 @@ mdc: true
 First principles thinking is a method of problem-solving that involves breaking down <span v-mark.box.blue>complex issues</span> into their most <span v-mark.box.green>basic and fundamental parts</span>.
 
 <!--
-- Motive for giving this talk
+- Essatinally:
+  - complex issues into fudementals
+- How my brain works 
+
 - End: Question we are going to answer this talk
 -->
 
 ---
 
-How does <span v-mark.underline.green>HTML & CSS</span> work?
+- How does <span v-mark.underline.green>HTML & CSS</span> work?
 <br/>
 <br/>
-What <span v-mark.underline.yellow>JavaScript</span> does under the hood?
+- What <span v-mark.underline.yellow>JavaScript</span> does under the hood?
 <br/>
 <br/>
-Why do we need <span v-mark.underline.red>web frameworks</span>?
+- Why do we need <span v-mark.underline.red>web frameworks</span>?
 
 <!--
 - Question answering this talk
-- End: Let answer the first question
+- Along the way build small app to see why each thing is useful 
 -->
 
 ---
@@ -79,7 +77,7 @@ Why do we need <span v-mark.underline.red>web frameworks</span>?
 
 ---
 
-```html {all|3-5|7-12|8}
+```html {all|3-5|7-12|8|9-11|all}
 <!DOCTYPE html>
   <html>
       <head>
@@ -89,7 +87,7 @@ Why do we need <span v-mark.underline.red>web frameworks</span>?
       <body>
           <h1 style="color: red; font-size: 40px;">Hello World!</h1>
           <div Class='btn'>
-              <button> Don't Press </button>
+              <button> Counter </button>
           </div>
       </body>
   </html>
@@ -115,10 +113,6 @@ id1 --> Layout
 Layout --> Paint
 ```
 
----
-
-![Local Image](/basicHtmlCss.png)
-
 <!--
 - Basic Web App
 - Go to ONLINE IDE
@@ -138,7 +132,6 @@ Layout --> Paint
 ### JS Engines
 
 <span v-mark.box.green>Parsing</span>, <span v-mark.underline.orange>Interpreting</span> and <span v-mark.circle.red>Executing</span> JS
-
 
 ---
 
@@ -273,7 +266,7 @@ thrid = function()
 <body>
     <h1 style="color: red; font-size: 40px;">Hello World!</h1>
     <div class="btn">
-        <button id="myButton">Don't Press</button>
+        <button id="myButton">Conter</button>
     </div>
 
     <script>
