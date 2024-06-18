@@ -19,11 +19,7 @@ mdc: true
 # First Principles of Web Development
 
 <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/Lukebrown14/WebDevFundamental" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -42,7 +38,9 @@ End: What is frist principles
 
 ---
 
+<div>
 First principles thinking is a method of problem-solving that involves breaking down <span v-mark.box.blue>complex issues</span> into their most <span v-mark.box.green>basic and fundamental parts</span>.
+</div>
 
 <!--
 - Essatinally:
@@ -257,7 +255,7 @@ thrid = function()
 
 ---
 
-```html {all|11-21|13-14|16-20}
+```html {all|12-21|13-15|16-20|all}
 <!DOCTYPE html>
 <html>
 <head>
@@ -266,17 +264,17 @@ thrid = function()
 <body>
     <h1 style="color: red; font-size: 40px;">Hello World!</h1>
     <div class="btn">
-        <button id="myButton">Conter</button>
+        <button id="myButton">Counter</button>
+        <span id="counter">0</span>
     </div>
-
     <script>
-        // Get the button element by its ID
+        let count = 0;
+        const counterElement = document.getElementById('counter');
         const button = document.getElementById('myButton');
 
-        // Add an event listener to the button to listen for clicks
         button.addEventListener('click', function() {
-            // Display a pop-up alert when the button is pressed
-            alert('You pressed the button!');
+            count++;
+            counterElement.textContent = count;
         });
     </script>
 </body>
@@ -307,14 +305,11 @@ A web framework is a software platform designed to support the development of we
 - State Management
 <br/>
 <br/>
-- Data Binding
-<br/>
-<br/>
 - Server Communication
 
 ---
 
-```jsx {4|6-14}
+```jsx {all|4|6-14|all}
 import React, { useState } from 'react';
 
 export function App() {
